@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvCarMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Marca"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCarModelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Modelo"
+        app:layout_constraintTop_toBottomOf="@+id/tvCarMarca"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCarAño"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Año"
+        app:layout_constraintTop_toBottomOf="@id/tvCarModelo"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCarPuertas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4"
+        app:layout_constraintTop_toBottomOf="@id/tvCarAño"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCarColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Color"
+        app:layout_constraintTop_toBottomOf="@+id/tvCarPuertas"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCarPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Precio"
+        app:layout_constraintTop_toBottomOf="@+id/tvCarColor"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
