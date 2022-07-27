@@ -3,21 +3,17 @@ package com.example.carsrecycler
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.carsrecycler.databinding.ItemCarBinding
 
 class CarViewHolder(view: View):RecyclerView.ViewHolder(view) {
-    val carMarca = view.findViewById<TextView>(R.id.tvCarMarca)
-    val carModelo = view.findViewById<TextView>(R.id.tvCarModelo)
-    val carAño = view.findViewById<TextView>(R.id.tvCarAño)
-    val carDoors = view.findViewById<TextView>(R.id.tvCarPuertas)
-    val carColor = view.findViewById<TextView>(R.id.tvCarColor)
-    val carPrecio = view.findViewById<TextView>(R.id.tvCarPrecio)
+    val binding = ItemCarBinding.bind(view)
 
     fun render(carModel: Car){
-        carMarca.text = carModel.make
-        carModelo.text = carModel.model
-        carAño.text = carModel.year
-        carDoors.text = carModel.doors.toString()
-        carColor.text = carModel.colour
-        carPrecio.text = carModel.price
+        binding.tvCarMarca.text = carModel.make
+        binding.tvCarModelo.text = carModel.model
+        binding.tvCarAO.text = carModel.year
+        binding.tvCarPuertas.text = carModel.doors.toString()
+        binding.tvCarColor.text = carModel.colour
+        binding.tvCarPrecio.text = carModel.price
     }
 }

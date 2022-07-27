@@ -4,17 +4,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.carsrecycler.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var bindingVar : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        bindingVar = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(bindingVar.root)
         initRecyclerView()
     }
 
     private fun initRecyclerView() {
-        val recyclerViewCarXML = findViewById<RecyclerView>(R.id.cars_recycler_xml)
-        recyclerViewCarXML.layoutManager = LinearLayoutManager(this)
-        recyclerViewCarXML.adapter = CarAdapter(CarsProvider.carList)
+        bindingVar.carsRecyclerXml.layoutManager = LinearLayoutManager(this)
+        bindingVar.carsRecyclerXml.adapter = CarAdapter(CarsProvider.carList)
     }
 }
